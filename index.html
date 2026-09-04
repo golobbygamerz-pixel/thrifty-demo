@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="THRIFTY — affordable, stylish and modern everyday fashion.">
+  <meta name="theme-color" content="#2874F0">
+
+  <title>THRIFTY — Everyday Fashion</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- TOAST -->
+  <div id="toast" class="toast"></div>
+
+  <!-- HEADER -->
+  <header class="header">
+
+    <div class="top-header container">
+
+      <button class="mobile-menu" id="menuBtn">☰</button>
+
+      <a href="#" class="logo">THRIFTY</a>
+
+      <form class="search-box" id="searchForm">
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Search for products, brands and more"
+          autocomplete="off"
+        >
+        <button type="submit">⌕</button>
+
+        <div class="suggestions" id="suggestions"></div>
+      </form>
+
+      <div class="header-actions">
+
+        <button id="accountBtn">
+          Account
+        </button>
+
+        <button id="wishlistBtn">
+          ♡ <span id="wishCount">0</span>
+        </button>
+
+        <button id="cartBtn">
+          🛒 <span id="cartCount">0</span>
+        </button>
+
+      </div>
+
+    </div>
+
+    <!-- CATEGORY NAV -->
+    <nav class="category-nav">
+
+      <div class="container category-inner">
+
+        <a href="#shop" data-category="All">All</a>
+        <a href="#shop" data-category="Men">Men</a>
+        <a href="#shop" data-category="Women">Women</a>
+        <a href="#shop" data-category="T-Shirts">T-Shirts</a>
+        <a href="#shop" data-category="Shirts">Shirts</a>
+        <a href="#shop" data-category="Jeans">Jeans</a>
+        <a href="#shop" data-category="Dresses">Dresses</a>
+        <a href="#shop" data-category="Hoodies">Hoodies</a>
+        <a href="#shop" data-category="New Arrivals">New Arrivals</a>
+        <a href="#shop" data-category="Offers">Offers</a>
+
+      </div>
+
+    </nav>
+
+  </header>
+
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero">
+
+      <div class="hero-track" id="heroTrack">
+
+        <article class="hero-slide">
+
+          <div class="hero-content">
+
+            <span class="eyebrow">
+              THRIFTY NEW DROP
+            </span>
+
+            <h1>
+              Style that fits your budget.
+            </h1>
+
+            <p>
+              Discover everyday fashion without overspending.
+            </p>
+
+            <button class="primary-btn" data-category="All">
+              Shop Now →
+            </button>
+
+          </div>
+
+          <div class="hero-visual visual-one">
+            <span>NEW<br>SEASON</span>
+          </div>
+
+        </article>
+
+
+        <article class="hero-slide">
+
+          <div class="hero-content">
+
+            <span class="eyebrow">
+              FRESH STYLES
+            </span>
+
+            <h1>
+              Look good. Spend smart.
+            </h1>
+
+            <p>
+              Easy everyday fits made for your rotation.
+            </p>
+
+            <button class="primary-btn" data-category="New Arrivals">
+              Explore Collection →
+            </button>
+
+          </div>
+
+          <div class="hero-visual visual-two">
+            <span>FRESH<br>FITS</span>
+          </div>
+
+        </article>
+
+
+        <article class="hero-slide">
+
+          <div class="hero-content">
+
+            <span class="eyebrow">
+              LIMITED OFFERS
+            </span>
+
+            <h1>
+              More style. Less spend.
+            </h1>
+
+            <p>
+              Shop selected styles with special prices.
+            </p>
+
+            <button class="primary-btn" data-category="Offers">
+              Shop Offers →
+            </button>
+
+          </div>
+
+          <div class="hero-visual visual-three">
+            <span>UP TO<br>50% OFF</span>
+          </div>
+
+        </article>
+
+      </div>
+
+      <button class="hero-arrow prev" id="heroPrev">‹</button>
+      <button class="hero-arrow next" id="heroNext">›</button>
+
+      <div class="hero-dots" id="heroDots"></div>
+
+    </section>
+
+
+    <!-- CATEGORIES -->
+    <section class="section container">
+
+      <div class="section-heading">
+
+        <div>
+          <span class="eyebrow blue">BROWSE</span>
+          <h2>Shop by category</h2>
+        </div>
+
+        <button class="text-btn" data-category="All">
+          View all →
+        </button>
+
+      </div>
+
+
+      <div class="category-grid">
+
+        <button class="category-card men" data-category="Men">
+          <span>MEN</span>
+        </button>
+
+        <button class="category-card women" data-category="Women">
+          <span>WOMEN</span>
+        </button>
+
+        <button class="category-card tshirt" data-category="T-Shirts">
+          <span>T-SHIRTS</span>
+        </button>
+
+        <button class="category-card shirts" data-category="Shirts">
+          <span>SHIRTS</span>
+        </button>
+
+        <button class="category-card jeans" data-category="Jeans">
+          <span>JEANS</span>
+        </button>
+
+        <button class="category-card dresses" data-category="Dresses">
+          <span>DRESSES</span>
+        </button>
+
+        <button class="category-card hoodies" data-category="Hoodies">
+          <span>HOODIES</span>
+        </button>
+
+        <button class="category-card new" data-category="New Arrivals">
+          <span>NEW ARRIVALS</span>
+        </button>
+
+      </div>
+
+    </section>
+
+
+    <!-- TRENDING -->
+    <section class="section container">
+
+      <div class="section-heading">
+
+        <div>
+          <span class="eyebrow blue">TRENDING</span>
+          <h2>Trending now</h2>
+        </div>
+
+        <button class="text-btn" data-category="All">
+          View all →
+        </button>
+
+      </div>
+
+      <div class="product-grid" id="trendingGrid"></div>
+
+    </section>
+
+
+    <!-- SHOP -->
+    <section class="shop-section" id="shop">
+
+      <div class="container">
+
+        <div class="section-heading shop-heading">
+
+          <div>
+
+            <span class="eyebrow blue">
+              COLLECTION
+            </span>
+
+            <h2 id="shopTitle">
+              All products
+            </h2>
+
+            <p id="resultCount">
+              0 products
+            </p>
+
+          </div>
+
+
+          <div class="shop-controls">
+
+            <button class="filter-mobile" id="filterMobile">
+              ☷ Filter
+            </button>
+
+            <select id="sortSelect">
+
+              <option value="recommended">
+                Recommended
+              </option>
+
+              <option value="newest">
+                Newest
+              </option>
+
+              <option value="low">
+                Price: Low to High
+              </option>
+
+              <option value="high">
+                Price: High to Low
+              </option>
+
+              <option value="rating">
+                Rating
+              </option>
+
+            </select>
+
+          </div>
+
+        </div>
+
+
+        <div class="shop-layout">
+
+          <!-- FILTERS -->
+          <aside class="filters" id="filters">
+
+            <div class="filter-title">
+
+              Filters
+
+              <button id="clearFilters">
+                Clear
+              </button>
+
+            </div>
+
+
+            <label>
+
+              Category
+
+              <select id="categoryFilter">
+
+                <option>All</option>
+                <option>Men</option>
+                <option>Women</option>
+                <option>T-Shirts</option>
+                <option>Shirts</option>
+                <option>Jeans</option>
+                <option>Dresses</option>
+                <option>Hoodies</option>
+                <option>New Arrivals</option>
+                <option>Offers</option>
+
+              </select>
+
+            </label>
+
+
+            <label>
+
+              Size
+
+              <div class="size-chips" id="sizeChips">
+
+                <button>S</button>
+                <button>M</button>
+                <button>L</button>
+                <button>XL</button>
+                <button>XXL</button>
+
+              </div>
+
+            </label>
+
+
+            <label>
+
+              Maximum price
+
+              <output id="priceValue">
+                ₹2,000
+              </output>
+
+              <input
+                type="range"
+                id="priceFilter"
+                min="299"
+                max="2000"
+                value="2000"
+              >
+
+            </label>
+
+
+            <label>
+
+              Minimum rating
+
+              <select id="ratingFilter">
+
+                <option value="0">
+                  Any rating
+                </option>
+
+                <option value="4">
+                  4★ & above
+                </option>
+
+                <option value="4.5">
+                  4.5★ & above
+                </option>
+
+              </select>
+
+            </label>
+
+          </aside>
+
+
+          <!-- PRODUCTS -->
+          <div class="shop-products">
+
+            <div class="product-grid" id="productGrid"></div>
+
+            <div class="empty-state" id="emptyState" hidden>
+
+              <div class="empty-icon">
+                ⌕
+              </div>
+
+              <h3>
+                No products found
+              </h3>
+
+              <p>
+                Try changing your filters or search.
+              </p>
+
+              <button class="primary-btn" id="resetSearch">
+                Continue Shopping
+              </button>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- OFFER -->
+    <section class="offer container">
+
+      <div>
+
+        <span class="eyebrow">
+          THRIFTY OFFERS
+        </span>
+
+        <h2>
+          Up to 50% off selected styles.
+        </h2>
+
+        <p>
+          Fresh fits. Better prices.
+        </p>
+
+      </div>
+
+      <button
+        class="primary-btn white-btn"
+        data-category="Offers"
+      >
+        Shop Offers →
+      </button>
+
+    </section>
+
+
+    <!-- WHY THRIFTY -->
+    <section class="section container">
+
+      <div class="section-heading">
+
+        <div>
+
+          <span class="eyebrow blue">
+            TRUSTED
+          </span>
+
+          <h2>
+            Why THRIFTY
+          </h2>
+
+        </div>
+
+      </div>
+
+
+      <div class="perks">
+
+        <div>
+          <b>✓</b>
+          <h3>Secure Payments</h3>
+          <p>Simple and safe checkout experience.</p>
+        </div>
+
+        <div>
+          <b>↗</b>
+          <h3>Fast Delivery</h3>
+          <p>Quick delivery updates from order to door.</p>
+        </div>
+
+        <div>
+          <b>↩</b>
+          <h3>Easy Returns</h3>
+          <p>A straightforward returns experience.</p>
+        </div>
+
+        <div>
+          <b>★</b>
+          <h3>Quality Fashion</h3>
+          <p>Styles selected for everyday wear.</p>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- REVIEWS -->
+    <section class="reviews">
+
+      <div class="container section">
+
+        <div class="section-heading">
+
+          <div>
+
+            <span class="eyebrow blue">
+              REVIEWS
+            </span>
+
+            <h2>
+              What shoppers say
+            </h2>
+
+          </div>
+
+        </div>
+
+
+        <div class="review-grid">
+
+          <article>
+
+            <div class="stars">
+              ★★★★★
+            </div>
+
+            <p>
+              “Clean styles, good prices and a really easy shopping experience.”
+            </p>
+
+            <strong>
+              Arjun K.
+            </strong>
+
+          </article>
+
+
+          <article>
+
+            <div class="stars">
+              ★★★★★
+            </div>
+
+            <p>
+              “The fit guide made choosing my size much easier.”
+            </p>
+
+            <strong>
+              Meera S.
+            </strong>
+
+          </article>
+
+
+          <article>
+
+            <div class="stars">
+              ★★★★☆
+            </div>
+
+            <p>
+              “Fast browsing and simple checkout. Loved the new collection.”
+            </p>
+
+            <strong>
+              Rohit M.
+            </strong>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- NEWSLETTER -->
+    <section class="newsletter container">
+
+      <div>
+
+        <span class="eyebrow">
+          STAY IN THE LOOP
+        </span>
+
+        <h2>
+          Get the latest from THRIFTY.
+        </h2>
+
+        <p>
+          New drops, offers and exclusive updates.
+        </p>
+
+      </div>
+
+
+      <form id="newsletterForm">
+
+        <input
+          type="email"
+          placeholder="Enter your email"
+          required
+        >
+
+        <button class="primary-btn">
+          Subscribe
+        </button>
+
+      </form>
+
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer>
+
+    <div class="container footer-grid">
+
+      <div>
+
+        <a class="logo footer-logo">
+          THRIFTY
+        </a>
+
+        <p>
+          Affordable, stylish and modern everyday fashion.
+        </p>
+
+      </div>
+
+
+      <div>
+
+        <h4>Shop</h4>
+
+        <a data-category="Men">Men</a>
+        <a data-category="Women">Women</a>
+        <a data-category="New Arrivals">New Arrivals</a>
+        <a data-category="Offers">Offers</a>
+
+      </div>
+
+
+      <div>
+
+        <h4>Help</h4>
+
+        <a>Shipping</a>
+        <a>Returns</a>
+        <a>FAQ</a>
+        <a>Size Guide</a>
+
+      </div>
+
+
+      <div>
+
+        <h4>Legal</h4>
+
+        <a>Privacy Policy</a>
+        <a>Terms & Conditions</a>
+        <a>Refund Policy</a>
+        <a>Contact Us</a>
+
+      </div>
+
+    </div>
+
+
+    <div class="container footer-bottom">
+
+      <span>
+        © 2026 THRIFTY. All rights reserved.
+      </span>
+
+      <span>
+        Instagram · Facebook · YouTube
+      </span>
+
+    </div>
+
+  </footer>
+
+
+  <!-- CART DRAWER -->
+  <div class="drawer-backdrop" id="backdrop"></div>
+
+  <aside class="cart-drawer" id="cartDrawer">
+
+    <div class="drawer-header">
+
+      <h3>
+        Your cart
+      </h3>
+
+      <button class="close-btn" data-close>
+        ×
+      </button>
+
+    </div>
+
+
+    <div class="drawer-body" id="drawerItems"></div>
+
+
+    <div class="drawer-footer">
+
+      <div class="drawer-total">
+
+        <span>
+          Total
+        </span>
+
+        <strong id="drawerTotal">
+          ₹0
+        </strong>
+
+      </div>
+
+      <button
+        class="primary-btn full"
+        id="checkoutBtn"
+      >
+        Proceed to Checkout
+      </button>
+
+    </div>
+
+  </aside>
+
+
+  <!-- MODAL -->
+  <div class="modal-backdrop" id="modalBackdrop">
+
+    <div class="modal">
+
+      <button
+        class="close-btn modal-close"
+        data-close
+      >
+        ×
+      </button>
+
+      <div id="modalContent"></div>
+
+    </div>
+
+  </div>
+
+
+  <script src="script.js"></script>
+
+</body>
+</html>
